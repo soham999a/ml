@@ -24,3 +24,13 @@
     font-family: var(--font-body), system-ui, sans-serif;
   }
 }
+
+@keyframes loadingBar {
+  0% { width: 0%; }
+  60% { width: 70%; }
+  100% { width: 100%; }
+}
+
+.loading-bar {
+  animation: loadingBar 1.2s ease-in-out forwards;
+}
