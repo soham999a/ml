@@ -1,9 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LoadingScreen from "@/components/LoadingScreen";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  themeColor: "#2f0404",
+};
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -31,12 +35,17 @@ export const metadata: Metadata = {
     "spiritual development",
     "community seva",
   ],
+  icons: {
+    icon: "/logo.jpeg",
+    apple: "/logo.jpeg",
+  },
   openGraph: {
     title: "Ram Lala Mandir & Sebashram Sangha | Ram Lala Dham",
     description:
       "An integrated spiritual, cultural, community & economic development initiative in West Bengal.",
     siteName: "Ram Lala Dham",
     type: "website",
+    images: [{ url: "/logo.jpeg" }],
   },
 };
 

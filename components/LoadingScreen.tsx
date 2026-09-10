@@ -23,9 +23,12 @@ export default function LoadingScreen() {
         fading ? "opacity-0" : "opacity-100"
       }`}
     >
-      <div className="mb-6 text-secondary-fixed text-4xl font-heading animate-pulse">
-        ॥ ॐ ॥
-      </div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/logo.jpeg"
+        alt="Ram Lala Mandir Emblem"
+        className="mb-6 h-24 w-24 rounded-full object-contain shadow-lg animate-pulse"
+      />
 
       <h1 className="font-heading text-3xl md:text-5xl text-surface-bright tracking-tight text-center px-4">
         Ram Lala Mandir

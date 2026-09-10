@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { useState } from "react";
 
+const CORRIDOR_IMAGE =
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuDWEzN0cM7qLVdTNhv_UZAX_ME-E1xyhs1XgU-PuOo-3biRD5i3uARm3Z1yaCOrBWJ4EuPS62XOIv_EssKLg0_5S3PIpJ9yj1ttzGsT_qhMW6MAS-_8cCBhsofrdeUaTRS4TsDdU1Uxa_bVQQfkVds2CUQGWsuST9Pe-xcvQizNr4BexxC12nI8SDknWFL_9YIVrrwz7oNSlOpHHgncYm9gQc6PTlVT64UlnNmpit3l6Ul3FcNVsi0x";
+
 /* ───────────────────────── data ───────────────────────── */
 
 const countryCodes = [
@@ -82,6 +85,7 @@ const infoCards = [
       "PO – Diamond Harbour",
       "Dist – South 24 Parganas, WB 743331",
       "",
+      "Seva Helpdesk: +91 70031 25972",
       "Office Hours: Mon – Sat, 09:30 AM – 05:30 PM IST",
       "Sunday & Public Holidays: By appointment only",
     ],
@@ -271,7 +275,7 @@ export default function ContactPage() {
       </section>
 
       {/* ════════════════ 3 INSTITUTIONAL PILLARS ════════════════ */}
-      <section className="bg-primary">
+      <section className="temple-pattern-dark bg-primary">
         <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="text-center mb-14">
             <span className="inline-block rounded-full border border-secondary/30 bg-secondary/10 px-4 py-1.5 font-body text-xs font-semibold uppercase tracking-widest text-secondary-fixed">
@@ -539,6 +543,18 @@ export default function ContactPage() {
 
             {/* ─── RIGHT: INFO CARDS ─── */}
             <div className="lg:col-span-5 space-y-6">
+              <div className="group relative overflow-hidden rounded-2xl border border-outline-variant">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={CORRIDOR_IMAGE}
+                  alt="Aerial view of the temple campus corridor in rural West Bengal under soft morning mist"
+                  className="h-48 w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
+                <p className="absolute bottom-3 left-4 right-4 font-heading text-sm italic text-surface">
+                  The future pilgrim corridor — connecting devotion to community.
+                </p>
+              </div>
               {infoCards.map((card) => (
                 <div
                   key={card.title}
@@ -551,15 +567,26 @@ export default function ContactPage() {
                     </h3>
                   </div>
                   <div className="space-y-1">
-                    {card.lines.map((line, i) =>
-                      line === "" ? (
-                        <div key={i} className="h-2" />
-                      ) : (
+                    {card.lines.map((line, i) => {
+                      if (line === "") return <div key={i} className="h-2" />;
+                      const phoneMatch = line.match(/\+91[ 0-9]+$/);
+                      if (phoneMatch) {
+                        return (
+                          <a
+                            key={i}
+                            href={`tel:${line.replace(/\s+/g, "")}`}
+                            className="block font-body text-sm font-semibold leading-relaxed text-primary transition-colors hover:text-primary-container"
+                          >
+                            {line}
+                          </a>
+                        );
+                      }
+                      return (
                         <p key={i} className="font-body text-sm leading-relaxed text-on-surface-variant">
                           {line}
                         </p>
-                      ),
-                    )}
+                      );
+                    })}
                   </div>
                 </div>
               ))}

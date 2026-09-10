@@ -50,16 +50,17 @@ const milestones = [
 
 export default function Timeline() {
   return (
-    <div className="w-full overflow-x-auto pb-4">
-      <div className="min-w-[640px] md:min-w-0">
+    <div className="w-full">
+      {/* ── Desktop (md+): horizontal roadmap ── */}
+      <div className="hidden md:block">
         {/* Connector line */}
-        <div className="relative mx-8 mb-8 hidden md:block">
+        <div className="relative mx-8 mb-8">
           <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-secondary/30 -translate-y-1/2" />
-          <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-secondary -translate-y-1/2 w-[40%]" />
+          <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-secondary -translate-y-1/2 w-[20%]" />
         </div>
 
-        {/* Step indicators (desktop) */}
-        <div className="hidden md:flex justify-between px-4 mb-10">
+        {/* Step indicators */}
+        <div className="flex justify-between px-4 mb-10">
           {milestones.map((m) => (
             <div key={m.year} className="flex flex-col items-center relative z-10">
               <div
@@ -74,7 +75,7 @@ export default function Timeline() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-5">
+        <div className="grid grid-cols-5 gap-5">
           {milestones.map((m) => (
             <div
               key={m.year}
@@ -128,6 +129,70 @@ export default function Timeline() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* ── Mobile (<md): vertical timeline ── */}
+      <div className="relative ml-3 border-l-2 border-secondary/30 md:hidden">
+        {milestones.map((m) => (
+          <div key={m.year} className="relative pb-8 pl-8 last:pb-0">
+            <span
+              className={`absolute -left-[9px] top-1.5 h-4 w-4 rounded-full border-2 ${
+                m.highlighted
+                  ? "bg-secondary border-secondary"
+                  : "bg-surface-container-lowest border-secondary/50"
+              }`}
+            />
+            <div
+              className={`rounded-2xl p-5 ${
+                m.highlighted
+                  ? "bg-primary text-surface-bright ring-2 ring-secondary-container"
+                  : "bg-surface-container-lowest"
+              }`}
+            >
+              <div className="flex items-center justify-between gap-3">
+                <p
+                  className={`font-heading text-2xl font-bold ${
+                    m.highlighted ? "text-surface-bright" : "text-on-surface"
+                  }`}
+                >
+                  {m.year}
+                </p>
+                {m.highlighted ? (
+                  <span className="inline-flex items-center rounded-full px-3 py-1 font-body text-[11px] font-semibold uppercase tracking-widest bg-secondary-container/30 text-surface-bright">
+                    {m.status}
+                  </span>
+                ) : (
+                  <PillBadge variant={m.statusVariant}>{m.status}</PillBadge>
+                )}
+              </div>
+              <h3
+                className={`mt-2 font-heading text-lg font-semibold ${
+                  m.highlighted ? "text-surface-bright" : "text-on-surface"
+                }`}
+              >
+                {m.title}
+              </h3>
+              <p
+                className={`mt-2 font-body text-sm leading-relaxed ${
+                  m.highlighted
+                    ? "text-surface-bright/80"
+                    : "text-on-surface-variant"
+                }`}
+              >
+                {m.description}
+              </p>
+              <div
+                className={`mt-3 pt-3 border-t text-xs font-body font-semibold uppercase tracking-wider ${
+                  m.highlighted
+                    ? "border-surface-bright/20 text-surface-bright/60"
+                    : "border-on-surface/10 text-on-surface-variant/60"
+                }`}
+              >
+                {m.label}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

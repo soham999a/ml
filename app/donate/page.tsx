@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 
+const EMBLEM_IMAGE = "/logo.jpeg";
+
 const SEVA_PURPOSES = [
   {
     id: "annakshetra",
@@ -447,7 +449,7 @@ export default function DonatePage() {
                   <label className="mb-2 block text-xs font-bold uppercase tracking-widest text-on-surface-variant">
                     Currency
                   </label>
-                  <div className="inline-flex rounded-xl bg-surface-container-low p-1">
+                  <div className="inline-flex flex-wrap rounded-xl bg-surface-container-low p-1">
                     {CURRENCIES.map((c) => (
                       <button
                         key={c.code}
@@ -456,7 +458,7 @@ export default function DonatePage() {
                           setSelectedAmount("");
                           setCustomAmount("");
                         }}
-                        className={`rounded-lg px-4 py-2 text-sm font-semibold transition-all ${
+                        className={`rounded-lg px-3 py-2 text-sm font-semibold transition-all sm:px-4 ${
                           currency === c.code
                             ? "bg-primary text-on-primary shadow"
                             : "text-on-surface-variant hover:text-on-surface"
@@ -761,7 +763,7 @@ export default function DonatePage() {
       </section>
 
       {/* ──────────────────── GOVERNANCE SECTION ──────────────────── */}
-      <section className="bg-primary py-16 text-on-primary">
+      <section className="temple-pattern-dark bg-primary py-16 text-on-primary">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-4 text-center text-3xl font-bold">
             Governance &amp; Transparency
@@ -827,8 +829,13 @@ export default function DonatePage() {
 
           {/* Trust Banner */}
           <div className="mt-12 flex flex-col items-center gap-4 rounded-2xl border border-on-primary/20 bg-on-primary/10 py-8">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-on-primary/20 text-3xl">
-              🛕
+            <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border border-on-primary/20 bg-primary p-1">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={EMBLEM_IMAGE}
+                alt="Ram Lala Mandir Sebashram Sangha emblem"
+                className="h-full w-full rounded-full object-contain"
+              />
             </div>
             <p className="text-center text-lg font-bold">
               श्री राम लला संघ — Registered Charitable Trust
@@ -896,11 +903,11 @@ export default function DonatePage() {
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <a
-              href="tel:+9103324782047"
+              href="tel:+917003125972"
               className="flex items-center gap-2 rounded-xl bg-surface px-4 py-2 text-sm font-semibold text-on-surface shadow-sm transition-all hover:shadow-md"
             >
               <PhoneIcon />
-              +91 (033) 2478-2047
+              +91 70031 25972
             </a>
             <a
               href="mailto:seva@ramlalasangha.org"
@@ -910,7 +917,7 @@ export default function DonatePage() {
               seva@ramlalasangha.org
             </a>
             <a
-              href="https://wa.me/9103324782047"
+              href="https://wa.me/917003125972"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-xl bg-green-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-green-700 hover:shadow-md"

@@ -1,4 +1,9 @@
 import type { Metadata } from "next";
+import ScrollReveal from "@/components/ScrollReveal";
+import AnimatedCounter from "@/components/AnimatedCounter";
+
+const MASTERPLAN_IMAGE =
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuCGWphTnegOTH5OdzoU42QXheocV-gRl-JrItNIK-RLYkmcy4gJ_xewtuhtmq6Iy8Wzotjqz1ZwdCgkkDefFMrpunyv5aiImCD29oRVYX8Mq20Y97QPdKDPeuY-5Y4WEdMkyTZRwkBZizScmBVOUmuR8ry6usjt2I6tgC80pCI6qer_NCD7CQXZvZsz4ibwvnAAGhnepjq6zCS80yV_OxCUVWCvBk7uVF4UigKFn01hjB2Fi5tt5wE5";
 
 export const metadata: Metadata = {
   title: "Phase-I Campus | Ram Lala Dham",
@@ -148,12 +153,12 @@ export default function Phase1Page() {
   return (
     <main className="min-h-screen">
       {/* ─── Hero Section ─── */}
-      <section className="bg-primary-container py-24 text-center">
+      <section className="temple-pattern-dark bg-primary-container py-24 text-center">
         <span className="mb-6 inline-block rounded-full bg-tertiary-container px-5 py-2 text-xs font-semibold tracking-widest text-on-surface font-body">
           ॥ निर्माणं सेवा परमो संकल्पः ॥ Phase-I Master Plan (2026–2029)
         </span>
 
-        <h1 className="mx-auto max-w-5xl px-4 font-heading text-4xl leading-tight font-bold text-on-surface md:text-5xl">
+        <h1 className="mx-auto max-w-5xl px-4 font-heading text-3xl leading-tight font-bold text-on-surface sm:text-4xl md:text-5xl">
           Ram Lala Dham — 30,000 Sq Ft Phase-I Campus
         </h1>
 
@@ -189,11 +194,20 @@ export default function Phase1Page() {
           </h2>
 
           {/* Image placeholder */}
-          <div className="relative flex aspect-[16/9] w-full items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-primary/25 via-tertiary-container/30 to-primary-container/50">
-            <span className="font-heading text-xl text-on-surface-variant/50">
-              Campus Master Plan — Interactive Layout
-            </span>
-          </div>
+          <ScrollReveal>
+            <div className="group relative flex aspect-[16/9] w-full items-center justify-center overflow-hidden rounded-2xl bg-primary-container shadow-lg">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={MASTERPLAN_IMAGE}
+                alt="Watercolor architectural bird's-eye master plan of Ram Lala Dham campus with temple, annakshetra, gurukul, and charitable hospital"
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />
+              <span className="pointer-events-none absolute bottom-4 left-4 rounded-full bg-primary/70 px-4 py-1.5 font-body text-xs font-semibold uppercase tracking-widest text-surface backdrop-blur">
+                Campus Master Plan — Interactive Layout
+              </span>
+            </div>
+          </ScrollReveal>
 
           {/* Legend */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
@@ -243,7 +257,7 @@ export default function Phase1Page() {
       </section>
 
       {/* ─── Essential Infrastructure Grid ─── */}
-      <section className="bg-primary-container py-24">
+      <section className="temple-pattern-dark bg-primary-container py-24">
         <div className="mx-auto max-w-7xl px-4">
           <h2 className="mb-4 text-center font-heading text-3xl font-bold text-on-surface md:text-4xl">
             Essential Infrastructure
@@ -287,7 +301,9 @@ export default function Phase1Page() {
           <div className="mx-auto mt-10 max-w-2xl">
             <div className="mb-2 flex items-center justify-between font-body text-sm font-semibold text-on-surface">
               <span>Progress</span>
-              <span>38% Complete</span>
+              <span>
+                <AnimatedCounter end={38} suffix="% Complete" />
+              </span>
             </div>
             <div className="h-3 w-full overflow-hidden rounded-full bg-on-surface/10">
               <div

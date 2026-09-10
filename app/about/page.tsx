@@ -78,7 +78,7 @@ export default function AboutPage() {
           ॐ सर्वे भवन्तु सुखिनः
         </span>
 
-        <h1 className="mx-auto max-w-4xl px-4 font-heading text-4xl leading-tight font-bold text-on-surface md:text-5xl">
+        <h1 className="mx-auto max-w-4xl px-4 font-heading text-3xl leading-tight font-bold text-on-surface sm:text-4xl md:text-5xl">
           Reviving Eternal Dharma Through Compassion, Craftsmanship &amp; Community
         </h1>
 
@@ -167,7 +167,7 @@ export default function AboutPage() {
                 <h3 className="mb-1 font-heading text-base font-bold text-[#C9A84C]">
                   {s.title}
                 </h3>
-                <p className="hidden text-xs leading-relaxed text-white/70 lg:block">
+                <p className="text-xs leading-relaxed text-white/70 lg:hidden">
                   {s.desc}
                 </p>
               </div>

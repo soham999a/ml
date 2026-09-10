@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 
+const EMBLEM_IMAGE = "/logo.jpeg";
+
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
@@ -19,12 +21,20 @@ export default function Navbar() {
     <>
       <header className="sticky top-0 z-40 border-b border-secondary-container bg-surface">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-          <Link href="/" className="flex flex-col leading-tight" onClick={() => setOpen(false)}>
-            <span className="font-heading text-xl font-bold text-primary sm:text-2xl">
-              Ram Lala Mandir
-            </span>
-            <span className="font-body text-xs uppercase tracking-widest text-secondary">
-              Sebashram Sangha
+          <Link href="/" className="flex min-w-0 items-center gap-2.5 leading-tight sm:gap-3" onClick={() => setOpen(false)}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={EMBLEM_IMAGE}
+              alt="Ram Lala Mandir Emblem"
+              className="h-10 w-10 shrink-0 rounded-full object-contain sm:h-11 sm:w-11"
+            />
+            <span className="flex min-w-0 flex-col">
+              <span className="truncate font-heading text-lg font-bold text-primary sm:text-xl lg:text-2xl">
+                Ram Lala Mandir
+              </span>
+              <span className="font-body text-[10px] uppercase tracking-widest text-secondary sm:text-xs">
+                Sebashram Sangha
+              </span>
             </span>
           </Link>
 
@@ -84,9 +94,17 @@ export default function Navbar() {
         aria-modal="true"
       >
         <div className="flex items-center justify-between border-b border-primary-container px-5 py-4">
-          <span className="font-heading text-lg font-bold text-secondary-fixed">
-            Ram Lala Mandir
-          </span>
+          <div className="flex items-center gap-3">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={EMBLEM_IMAGE}
+              alt="Ram Lala Mandir Emblem"
+              className="h-10 w-10 shrink-0 rounded-full object-contain"
+            />
+            <span className="font-heading text-lg font-bold text-secondary-fixed">
+              Ram Lala Mandir
+            </span>
+          </div>
           <button
             type="button"
             aria-label="Close menu"

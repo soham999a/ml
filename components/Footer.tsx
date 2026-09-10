@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+const EMBLEM_IMAGE = "/logo.jpeg";
+
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
@@ -10,6 +12,7 @@ const quickLinks = [
 ];
 
 const phoneNumbers = [
+  "70031 25972",
   "89107 51594",
   "85858 50297",
   "89104 65442",
@@ -22,9 +25,17 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
           <div className="lg:col-span-2">
-            <h2 className="font-heading text-2xl font-bold text-secondary-fixed">
-              Ram Lala Mandir
-            </h2>
+            <div className="flex items-center gap-3.5">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={EMBLEM_IMAGE}
+                alt="Ram Lala Mandir Emblem"
+                className="h-12 w-12 shrink-0 rounded-full object-contain"
+              />
+              <h2 className="font-heading text-2xl font-bold text-secondary-fixed">
+                Ram Lala Mandir
+              </h2>
+            </div>
             <p className="mt-2 max-w-sm font-body text-surface-dim">
               Dedicated to the spiritual well-being and cultural upliftment of
               our community through service, devotion, and compassion.
@@ -64,13 +75,17 @@ export default function Footer() {
                   Phone
                 </span>
                 <div className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
-                  {phoneNumbers.map((num) => (
+                  {phoneNumbers.map((num, i) => (
                     <a
                       key={num}
                       href={`tel:${num.replace(/\s/g, "")}`}
-                      className="font-body text-sm text-surface-dim transition-colors hover:text-secondary-fixed"
+                      className={`font-body text-sm transition-colors hover:text-secondary-fixed ${
+                        i === 0
+                          ? "font-semibold text-secondary-fixed"
+                          : "text-surface-dim"
+                      }`}
                     >
-                      {num}
+                      {i === 0 ? `+91 ${num}` : num}
                     </a>
                   ))}
                 </div>

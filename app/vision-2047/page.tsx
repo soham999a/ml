@@ -138,7 +138,7 @@ export default function Vision2047Page() {
             𑁍 संस्कृतम् 𑁍
           </span>
 
-          <h1 className="mt-8 font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-on-primary-container">
+          <h1 className="mt-8 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-on-primary-container">
             Vision 2047:{" "}
             <span className="text-secondary-container">
               ₹500 Cr+ Integrated Cultural &amp; Socioeconomic Ecosystem
