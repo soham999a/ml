@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | Ram Lala Dham",
+  title: "About Us | Ram Lala Mandir",
   description:
-    "Learn about the Ram Lala Dham Trust, Sebashram Sangha, and our mission to revive eternal dharma in Eastern India through compassion, craftsmanship, and community.",
+    "Learn about the Ram Lala Mandir Trust, Sebashram Sangha, and our mission to revive eternal dharma in Eastern India through compassion, craftsmanship, and community.",
 };
 
 export default function AboutPage() {
@@ -83,7 +83,7 @@ export default function AboutPage() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl px-4 font-body text-lg text-on-surface-variant">
-          The Ram Lala Dham Trust — an initiative of Sebashram Sangha — is
+          The Ram Lala Mandir Trust — an initiative of Sebashram Sangha — is
           building a first-of-its-kind spiritual-cultural- humanitarian campus in
           the heart of rural Bengal, devoted to the timeless ideals of Shri Ram.
         </p>
@@ -113,7 +113,7 @@ export default function AboutPage() {
                 audacious: build a comprehensive campus where temple, hospital,
                 kitchen, school, and community centre co-exist as one living
                 organism — a{" "}
-                <strong className="text-on-surface">Ram Lala Dham</strong>.
+                <strong className="text-on-surface">Ram Lala Mandir</strong>.
               </p>
               <p>
                 Every brick laid is a prayer. Every meal served is an offering.
@@ -242,7 +242,7 @@ export default function AboutPage() {
           </h2>
           <p className="mb-10 font-body text-base text-on-surface-variant">
             Whether you contribute your time, expertise, or resources, every
-            act of seva helps bring Ram Lala Dham to life.
+            act of seva helps bring Ram Lala Mandir to life.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">

@@ -22,13 +22,13 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Ram Lala Mandir & Sebashram Sangha | Ram Lala Dham",
+  title: "Ram Lala Mandir & Sebashram Sangha | Ram Lala Mandir",
   description:
     "Ram Lala Mandir & Sebashram Sangha — an integrated spiritual, cultural, community and economic development initiative in West Bengal. A registered public charitable trust, 80G tax exempt.",
   keywords: [
     "Ram Lala Mandir",
     "Sebashram Sangha",
-    "Ram Lala Dham",
+    "Ram Lala Mandir",
     "temple trust",
     "West Bengal",
     "80G tax exempt",
@@ -40,10 +40,10 @@ export const metadata: Metadata = {
     apple: "/logo.jpeg",
   },
   openGraph: {
-    title: "Ram Lala Mandir & Sebashram Sangha | Ram Lala Dham",
+    title: "Ram Lala Mandir & Sebashram Sangha | Ram Lala Mandir",
     description:
       "An integrated spiritual, cultural, community & economic development initiative in West Bengal.",
-    siteName: "Ram Lala Dham",
+    siteName: "Ram Lala Mandir",
     type: "website",
     images: [{ url: "/logo.jpeg" }],
   },

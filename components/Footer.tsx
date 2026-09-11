@@ -12,9 +12,9 @@ const quickLinks = [
 ];
 
 const phoneNumbers = [
-  "70031 25972",
   "89107 51594",
   "85858 50297",
+  "70031 25972",
   "89104 65442",
   "85858 50296",
 ];
@@ -75,19 +75,22 @@ export default function Footer() {
                   Phone
                 </span>
                 <div className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
-                  {phoneNumbers.map((num, i) => (
-                    <a
-                      key={num}
-                      href={`tel:${num.replace(/\s/g, "")}`}
-                      className={`font-body text-sm transition-colors hover:text-secondary-fixed ${
-                        i === 0
-                          ? "font-semibold text-secondary-fixed"
-                          : "text-surface-dim"
-                      }`}
-                    >
-                      {i === 0 ? `+91 ${num}` : num}
-                    </a>
-                  ))}
+                  {phoneNumbers.map((num) => {
+                    const isPrimary = num === "70031 25972";
+                    return (
+                      <a
+                        key={num}
+                        href={`tel:${num.replace(/\s/g, "")}`}
+                        className={`font-body text-sm transition-colors hover:text-secondary-fixed ${
+                          isPrimary
+                            ? "font-semibold text-secondary-fixed"
+                            : "text-surface-dim"
+                        }`}
+                      >
+                        {isPrimary ? `+91 ${num}` : num}
+                      </a>
+                    );
+                  })}
                 </div>
               </li>
               <li>

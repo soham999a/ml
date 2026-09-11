@@ -2,67 +2,68 @@ import SectionHeading from "@/components/SectionHeading";
 import StatCard from "@/components/StatCard";
 import FiligreeDivider from "@/components/FiligreeDivider";
 import Timeline from "@/components/Timeline";
+import Icon from "@/components/Icon";
 
 const futureTiles = [
   {
-    icon: "✈",
+    icon: "plane",
     title: "International Pilgrimage Corridor",
     description:
-      "Dedicated travel facilitation for global devotees with multilingual support, visa assistance partnerships, and curated spiritual itineraries connecting Ram Lala Dham to the broader Hindu pilgrimage circuit.",
+      "Dedicated travel facilitation for global devotees with multilingual support, visa assistance partnerships, and curated spiritual itineraries connecting Ram Lala Mandir to the broader Hindu pilgrimage circuit.",
   },
   {
-    icon: "🏥",
+    icon: "hospital",
     title: "500-Bed Multi-Specialty Sebashram Hospital",
     description:
       "A charity-driven hospital offering tertiary healthcare to underserved communities, with specialities in cardiology, orthopaedics, Ayurveda, and palliative care — fully subsidised for BPL families.",
   },
   {
-    icon: "📚",
+    icon: "book",
     title: "Vedic University & Research Centre",
     description:
       "A residential university offering degrees in Vedic literature, Sanskrit grammar, Indian philosophy, and comparative religion — with international exchange programmes and digital classrooms.",
   },
   {
-    icon: "🧵",
+    icon: "pen-tool",
     title: "Artisan Heritage Craft Clusters",
     description:
       "Dedicated workspaces and market access for local artisans practising traditional crafts such as Chikankari, zardozi, terracotta, and handloom weaving, with e-commerce integration.",
   },
   {
-    icon: "📜",
+    icon: "scroll",
     title: "Digital Sanskrit Library & Archives",
     description:
       "A world-class digital repository of Sanskrit manuscripts, palm-leaf scans, and oral tradition recordings, accessible free to scholars worldwide via open-access platforms.",
   },
   {
-    icon: "🌿",
+    icon: "leaf",
     title: "Eco-Tourism & Yatri Nivas Resort Complex",
     description:
       "Sustainable guest accommodation blending traditional Indian hospitality with eco-conscious design — solar-powered cottages, organic kitchens, and nature trails along the riverfront.",
   },
   {
-    icon: "🌾",
+    icon: "wheat",
     title: "Agricultural Sustainability Hub",
     description:
       "A demonstration farm and training centre promoting organic farming, cow-based agriculture, seed banking, and water conservation techniques rooted in traditional Indian wisdom.",
   },
   {
-    icon: "👩",
+    icon: "user",
     title: "Women's Skill Development & Vocational Centre",
     description:
       "Empowering women through certified programmes in digital literacy, tailoring, food processing, handicraft production, and entrepreneurship development with microfinance linkages.",
   },
   {
-    icon: "⚽",
+    icon: "ball",
     title: "Youth Sports & Cultural Academy",
     description:
       "A state-of-the-art academy offering training in traditional Indian sports (kabaddi, wrestling, archery), classical dance, music, and Vedic recitation — nurturing holistic development.",
   },
   {
-    icon: "☀",
+    icon: "sun",
     title: "Solar Energy Independence Zone",
     description:
-      "A 20-acre solar farm powering the entire Dham complex with clean energy, featuring battery storage, EV charging stations, and a visitor education centre on renewable technology.",
+      "A 20-acre solar farm powering the entire Mandir complex with clean energy, featuring battery storage, EV charging stations, and a visitor education centre on renewable technology.",
   },
 ];
 
@@ -92,7 +93,7 @@ const impactMetrics = [
 const sustainabilityPillars = [
   {
     title: "Environmental",
-    icon: "🌍",
+    icon: "leaf",
     points: [
       "20-acre solar farm for complete energy independence",
       "Rainwater harvesting across all campus buildings",
@@ -102,7 +103,7 @@ const sustainabilityPillars = [
   },
   {
     title: "Social",
-    icon: "🤝",
+    icon: "users",
     points: [
       "Free multi-specialty hospital for underserved communities",
       "Vedic university with need-based scholarships",
@@ -112,7 +113,7 @@ const sustainabilityPillars = [
   },
   {
     title: "Cultural",
-    icon: "🕉",
+    icon: "temple",
     points: [
       "Heritage preservation of traditional architecture",
       "Vedic scholarship and Sanskrit revival programmes",
@@ -146,7 +147,7 @@ export default function Vision2047Page() {
           </h1>
 
           <p className="mt-6 mx-auto max-w-3xl font-body text-lg leading-relaxed text-on-primary-container/80">
-            A transformative 25-year roadmap aligning Ram Lala Dham with India&apos;s
+            A transformative 25-year roadmap aligning Ram Lala Mandir with India&apos;s
             centenary of independence — building a self-sustaining
             spiritual-cultural-humanitarian ecosystem for generations to come.
           </p>
@@ -174,7 +175,7 @@ export default function Vision2047Page() {
               &ldquo;
             </span>
             <p className="font-heading text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug text-on-surface max-w-4xl mx-auto">
-              By 2047, Ram Lala Dham aims to be a ₹500 Cr+ self-sustaining
+              By 2047, Ram Lala Mandir aims to be a ₹500 Cr+ self-sustaining
               spiritual-cultural-humanitarian ecosystem
             </p>
           </blockquote>
@@ -201,7 +202,7 @@ export default function Vision2047Page() {
             <StatCard
               value="1,000+"
               label="Employment"
-              description="Steady-state jobs across all Dham verticals"
+              description="Steady-state jobs across all Mandir verticals"
               icon="work"
             />
           </div>
@@ -215,7 +216,7 @@ export default function Vision2047Page() {
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading
             title="Future Expansion Blueprint"
-            subtitle="Ten flagship initiatives that will transform Ram Lala Dham into a globally recognized spiritual-cultural hub"
+            subtitle="Ten flagship initiatives that will transform Ram Lala Mandir into a globally recognized spiritual-cultural hub"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -226,7 +227,7 @@ export default function Vision2047Page() {
               >
                 <div className="flex items-start gap-4">
                   <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-secondary-container/20 text-2xl shrink-0 group-hover:bg-secondary-container/40 transition-colors">
-                    {tile.icon}
+                    <Icon name={tile.icon} className="h-6 w-6" />
                   </span>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-3 mb-1">
@@ -305,7 +306,7 @@ export default function Vision2047Page() {
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading
             title="Sustainability Pillars"
-            subtitle="Three interconnected pillars ensuring the Dham remains viable, impactful, and culturally rooted"
+            subtitle="Three interconnected pillars ensuring the Mandir remains viable, impactful, and culturally rooted"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -316,7 +317,7 @@ export default function Vision2047Page() {
               >
                 <div className="flex items-center gap-3 mb-6">
                   <span className="flex items-center justify-center w-12 h-12 rounded-full bg-tertiary-container/40 text-2xl">
-                    {pillar.icon}
+                    <Icon name={pillar.icon} className="h-6 w-6" />
                   </span>
                   <h3 className="font-heading text-xl font-semibold text-on-surface">
                     {pillar.title}

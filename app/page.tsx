@@ -46,7 +46,7 @@ const stats = [
     value: "₹500 Cr+",
     label: "Projected Ecosystem",
     description:
-      "Estimated economic and social impact of the complete Ram Lala Dham vision encompassing tourism, crafts, and welfare.",
+      "Estimated economic and social impact of the complete Ram Lala Mandir vision encompassing tourism, crafts, and welfare.",
   },
   {
     value: "Integrity",
@@ -146,7 +146,7 @@ export default function Home() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={HERO_IMAGE}
-            alt="Ram Lala Dham temple campus rendered at golden hour"
+            alt="Ram Lala Mandir temple campus rendered at golden hour"
             className="kenburns h-full w-full object-cover"
           />
         </div>
@@ -165,7 +165,7 @@ export default function Home() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl font-body text-base leading-relaxed text-surface/80 md:text-lg">
-            Ram Lala Dham &bull; An Integrated Spiritual, Cultural, Community
+            Ram Lala Mandir &bull; An Integrated Spiritual, Cultural, Community
             &amp; Economic Development Initiative in West Bengal.
           </p>
 
@@ -224,7 +224,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <ScrollReveal>
             <SectionHeading
-              title="Foundations of Ram Lala Dham"
+              title="Foundations of Ram Lala Mandir"
               subtitle="Six pillars that define the scope, scale, and integrity of this initiative."
             />
           </ScrollReveal>
@@ -260,7 +260,7 @@ export default function Home() {
                 The Diamond Harbour region stands at a unique crossroads.
                 Traditional temple craftsmanship is disappearing, community
                 infrastructure is underserved, and the spiritual heritage of
-                Bengal deserves a living, breathing home. Ram Lala Dham rises
+                Bengal deserves a living, breathing home. Ram Lala Mandir rises
                 at precisely this inflection — turning devotion into
                 measurable, lasting impact.
               </p>
@@ -364,7 +364,7 @@ export default function Home() {
           <ScrollReveal>
             <SectionHeading
               title="Your Inscription Awaits"
-              subtitle="Every contribution carves a permanent place in the legacy of Ram Lala Dham."
+              subtitle="Every contribution carves a permanent place in the legacy of Ram Lala Mandir."
             />
           </ScrollReveal>
 

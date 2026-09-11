@@ -6,9 +6,9 @@ const MASTERPLAN_IMAGE =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuCGWphTnegOTH5OdzoU42QXheocV-gRl-JrItNIK-RLYkmcy4gJ_xewtuhtmq6Iy8Wzotjqz1ZwdCgkkDefFMrpunyv5aiImCD29oRVYX8Mq20Y97QPdKDPeuY-5Y4WEdMkyTZRwkBZizScmBVOUmuR8ry6usjt2I6tgC80pCI6qer_NCD7CQXZvZsz4ibwvnAAGhnepjq6zCS80yV_OxCUVWCvBk7uVF4UigKFn01hjB2Fi5tt5wE5";
 
 export const metadata: Metadata = {
-  title: "Phase-I Campus | Ram Lala Dham",
+  title: "Phase-I Campus | Ram Lala Mandir",
   description:
-    "Explore the 30,000 sq ft Phase-I master plan for Ram Lala Dham — temples, hospital, annakshetra, gurukul, and more, targeted for Mahotsav 2029.",
+    "Explore the 30,000 sq ft Phase-I master plan for Ram Lala Mandir — temples, hospital, annakshetra, gurukul, and more, targeted for Mahotsav 2029.",
 };
 
 export default function Phase1Page() {
@@ -159,7 +159,7 @@ export default function Phase1Page() {
         </span>
 
         <h1 className="mx-auto max-w-5xl px-4 font-heading text-3xl leading-tight font-bold text-on-surface sm:text-4xl md:text-5xl">
-          Ram Lala Dham — 30,000 Sq Ft Phase-I Campus
+          Ram Lala Mandir — 30,000 Sq Ft Phase-I Campus
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl px-4 font-body text-lg text-on-surface-variant">
@@ -199,7 +199,7 @@ export default function Phase1Page() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={MASTERPLAN_IMAGE}
-                alt="Watercolor architectural bird's-eye master plan of Ram Lala Dham campus with temple, annakshetra, gurukul, and charitable hospital"
+                alt="Watercolor architectural bird's-eye master plan of Ram Lala Mandir campus with temple, annakshetra, gurukul, and charitable hospital"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />
@@ -228,7 +228,7 @@ export default function Phase1Page() {
             6 Core Campus Pillars
           </h2>
           <p className="mx-auto mb-16 max-w-2xl text-center font-body text-base text-on-surface-variant">
-            The six foundational wings that define the Ram Lala Dham campus
+            The six foundational wings that define the Ram Lala Mandir campus
             experience.
           </p>
 
@@ -362,7 +362,7 @@ export default function Phase1Page() {
             </h2>
             <p className="mx-auto mb-12 max-w-xl font-body text-base text-on-surface-variant">
               Your contribution permanently etches your name into the living
-              history of Ram Lala Dham. Choose a sponsorship tier and become part
+              history of Ram Lala Mandir. Choose a sponsorship tier and become part
               of Bengal&apos;s greatest spiritual revival.
             </p>
 

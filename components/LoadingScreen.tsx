@@ -44,7 +44,7 @@ export default function LoadingScreen() {
       </div>
 
       <p className="mt-4 font-body text-xs text-surface-dim/60 tracking-wider">
-        Ram Lala Dham &bull; Vision 2047
+        Ram Lala Mandir &bull; Vision 2047
       </p>
     </div>
   );

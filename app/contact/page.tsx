@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Icon from "@/components/Icon";
 
 const CORRIDOR_IMAGE =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuDWEzN0cM7qLVdTNhv_UZAX_ME-E1xyhs1XgU-PuOo-3biRD5i3uARm3Z1yaCOrBWJ4EuPS62XOIv_EssKLg0_5S3PIpJ9yj1ttzGsT_qhMW6MAS-_8cCBhsofrdeUaTRS4TsDdU1Uxa_bVQQfkVds2CUQGWsuST9Pe-xcvQizNr4BexxC12nI8SDknWFL_9YIVrrwz7oNSlOpHHgncYm9gQc6PTlVT64UlnNmpit3l6Ul3FcNVsi0x";
@@ -33,7 +34,7 @@ const inquiryPurposes = [
 
 const pillars = [
   {
-    icon: "🏢",
+    icon: "building",
     title: "Corporate CSR Alliances",
     subtitle: "Section 135 · Schedule VII Compliant",
     desc: "Structured CSR investments aligned with national heritage restoration, elderly care, and digital education mandates under the Companies Act.",
@@ -47,7 +48,7 @@ const pillars = [
     href: "#contact-form",
   },
   {
-    icon: "🏛️",
+    icon: "landmark",
     title: "Government & Civic Alliances",
     subtitle: "Public-Private Integration",
     desc: "Collaborate with district administration, ASI, tourism boards, and municipal bodies for integrated corridor development and heritage conservation.",
@@ -61,7 +62,7 @@ const pillars = [
     href: "#contact-form",
   },
   {
-    icon: "🕉️",
+    icon: "globe",
     title: "Global Dharma & Diaspora Chapters",
     subtitle: "Global Patron Circle",
     desc: "NRIs and international devotees can sponsor specific seva projects, sponsor pilgrim amenities, and establish diaspora chapter endowments.",
@@ -79,7 +80,7 @@ const pillars = [
 const infoCards = [
   {
     title: "Trust Secretariat & Campus",
-    icon: "📍",
+    icon: "map-pin",
     lines: [
       "Vill – Joydebpur, Kapat Hat",
       "PO – Diamond Harbour",
@@ -92,7 +93,7 @@ const infoCards = [
   },
   {
     title: "Direct Nodal Desks",
-    icon: "📞",
+    icon: "phone",
     lines: [
       "CSR & Institutional Desk",
       "csr@ramlalamandir.org",
@@ -106,7 +107,7 @@ const infoCards = [
   },
   {
     title: "Pilgrim Corridor & Access",
-    icon: "🗺️",
+    icon: "map",
     lines: [
       "65 km from Howrah Junction (via SH-1)",
       "72 km from Netaji Subhas Chandra Bose Intl. (CCU)",
@@ -119,25 +120,25 @@ const infoCards = [
 
 const volunteerTracks = [
   {
-    icon: "⚕️",
+    icon: "medical",
     title: "Medical Seva Fellowship",
     desc: "Deploy qualified doctors, nurses, and paramedics for weekly health camps serving elderly pilgrims and local villagers.",
     btn: "Apply for Medical Seva",
   },
   {
-    icon: "📚",
+    icon: "book",
     title: "Vedic & Digital Mentorship",
     desc: "Teach scripture recitation, basic computing, and digital literacy to rural youth and temple community members.",
     btn: "Apply to Mentor",
   },
   {
-    icon: "🍲",
+    icon: "food",
     title: "Annakshetra Kitchen Seva",
     desc: "Help serve sacred prasad to 500+ daily visitors — manage inventory, cooking logistics, and hygiene standards.",
     btn: "Join Kitchen Seva",
   },
   {
-    icon: "🏺",
+    icon: "archive",
     title: "Terracotta & Heritage Archives",
     desc: "Assist artisans in documenting Bengali terracotta traditions, digital cataloguing of temple artefacts and oral histories.",
     btn: "Apply for Archives",
@@ -164,10 +165,10 @@ const faqs = [
 ];
 
 const trustBadges = [
-  { icon: "✅", label: "80G & 12A Registered" },
-  { icon: "📋", label: "Section 135 CSR Eligible" },
-  { icon: "☎️", label: "Direct Helpdesk Support" },
-  { icon: "🏛️", label: "Registered Public Trust" },
+  { icon: "check-circle", label: "80G & 12A Registered" },
+  { icon: "clipboard", label: "Section 135 CSR Eligible" },
+  { icon: "phone", label: "Direct Helpdesk Support" },
+  { icon: "landmark", label: "Registered Public Trust" },
 ];
 
 /* ──────────────────────── component ───────────────────── */
@@ -264,7 +265,7 @@ export default function ContactPage() {
                 key={badge.label}
                 className="inline-flex items-center gap-2 rounded-full border border-secondary-fixed/20 bg-primary/40 px-4 py-2"
               >
-                <span className="text-sm" aria-hidden="true">{badge.icon}</span>
+                <Icon name={badge.icon} className="h-4 w-4" />
                 <span className="font-body text-xs font-medium text-surface-dim">
                   {badge.label}
                 </span>
@@ -297,7 +298,7 @@ export default function ContactPage() {
                 key={p.title}
                 className="flex flex-col rounded-2xl border border-secondary/20 bg-primary-container/80 p-8"
               >
-                <span className="mb-4 text-4xl" aria-hidden="true">{p.icon}</span>
+                <Icon name={p.icon} className="mb-4 h-9 w-9" />
                 <h3 className="font-heading text-xl font-bold text-surface">
                   {p.title}
                 </h3>
@@ -356,7 +357,7 @@ export default function ContactPage() {
 
               {submitted ? (
                 <div className="mt-10 rounded-2xl border border-secondary/40 bg-surface-container-low p-10 text-center">
-                  <span className="text-5xl" aria-hidden="true">🙏</span>
+                  <Icon name="sparkles" className="h-12 w-12 text-on-surface-variant" />
                   <h3 className="mt-4 font-heading text-2xl font-bold text-on-surface">
                     Inquiry Successfully Transmitted
                   </h3>
@@ -561,7 +562,7 @@ export default function ContactPage() {
                   className="rounded-2xl border border-outline-variant bg-surface-container-low p-6"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-2xl" aria-hidden="true">{card.icon}</span>
+                    <Icon name={card.icon} className="h-6 w-6" />
                     <h3 className="font-heading text-lg font-bold text-on-surface">
                       {card.title}
                     </h3>
@@ -618,7 +619,7 @@ export default function ContactPage() {
                 key={track.title}
                 className="flex flex-col rounded-2xl border border-secondary/20 bg-primary/50 p-6"
               >
-                <span className="mb-3 text-4xl" aria-hidden="true">{track.icon}</span>
+                <Icon name={track.icon} className="mb-3 h-9 w-9" />
                 <h3 className="font-heading text-lg font-bold text-surface">
                   {track.title}
                 </h3>

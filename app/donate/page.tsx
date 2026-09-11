@@ -2,13 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Icon from "@/components/Icon";
 
 const EMBLEM_IMAGE = "/logo.jpeg";
 
 const SEVA_PURPOSES = [
   {
     id: "annakshetra",
-    icon: "🍛",
+    icon: "food",
     title: "Nitya Annakshetra",
     subtitle: "Bhandara Seva",
     description:
@@ -17,7 +18,7 @@ const SEVA_PURPOSES = [
   },
   {
     id: "sanctum-stone",
-    icon: "🪨",
+    icon: "stone",
     title: "Ram Lala Sanctum Stone Carving",
     subtitle: "",
     description:
@@ -26,7 +27,7 @@ const SEVA_PURPOSES = [
   },
   {
     id: "sebashram",
-    icon: "🏥",
+    icon: "hospital",
     title: "Sebashram 100-Bed Hospital",
     subtitle: "",
     description:
@@ -35,7 +36,7 @@ const SEVA_PURPOSES = [
   },
   {
     id: "vedic-gurukul",
-    icon: "📚",
+    icon: "book",
     title: "Vedic Gurukul & Chatuspathi Seva",
     subtitle: "",
     description:
@@ -44,20 +45,20 @@ const SEVA_PURPOSES = [
   },
   {
     id: "hanuman-mandir",
-    icon: "🪔",
+    icon: "flame",
     title: "Shri Hanuman Mandir & Akhand Deep",
     subtitle: "",
     description:
-      "Sponsor the eternal flame and divine Hanuman temple that guards the sanctity of the dham.",
+      "Sponsor the eternal flame and divine Hanuman temple that guards the sanctity of the mandir.",
     price: "₹1,100",
   },
   {
     id: "vision-2047",
-    icon: "🏛️",
+    icon: "landmark",
     title: "Vision 2047 Masterplan Corpus Fund",
     subtitle: "",
     description:
-      "Invest in the long-term vision to transform the dham into a world-class spiritual and cultural centre.",
+      "Invest in the long-term vision to transform the mandir into a world-class spiritual and cultural centre.",
     price: "₹11,000",
   },
 ];
@@ -344,23 +345,23 @@ export default function DonatePage() {
           {/* Subtitle */}
           <p className="mb-10 max-w-2xl text-lg text-on-surface-variant">
             Every rupee you contribute directly sustains sacred rituals, community
-            welfare, and the grand vision of Shri Ram Lala Dham. Zero
+            welfare, and the grand vision of Shri Ram Lala Mandir. Zero
             administrative leakage — 100 % devotional impact.
           </p>
 
           {/* Trust Highlights */}
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
             {[
-              { icon: "📋", label: "Section 80G\nDeductible" },
-              { icon: "⚡", label: "Instant\nReceipt" },
-              { icon: "🔒", label: "Zero\nLeakage" },
-              { icon: "📊", label: "Statutory\nAudits" },
+              { icon: "clipboard", label: "Section 80G\nDeductible" },
+              { icon: "bolt", label: "Instant\nReceipt" },
+              { icon: "lock", label: "Zero\nLeakage" },
+              { icon: "chart", label: "Statutory\nAudits" },
             ].map((item) => (
               <div
                 key={item.label}
                 className="flex flex-col items-center gap-2 rounded-2xl border border-outline-variant/30 bg-surface/60 px-4 py-5 text-center backdrop-blur"
               >
-                <span className="text-2xl">{item.icon}</span>
+                <Icon name={item.icon} className="h-6 w-6" />
                 <span className="whitespace-pre-line text-sm font-semibold text-on-surface">
                   {item.label}
                 </span>
@@ -399,7 +400,7 @@ export default function DonatePage() {
                     </span>
                   )}
 
-                  <span className="text-3xl">{seva.icon}</span>
+                  <Icon name={seva.icon} className="h-8 w-8" />
 
                   <div>
                     <h3 className="text-lg font-bold text-on-surface">
@@ -776,22 +777,22 @@ export default function DonatePage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                icon: "📋",
+                icon: "clipboard",
                 title: "Section 80G &amp; 12A Certified",
                 desc: "Tax-deductible contributions under the Income Tax Act. Full legal compliance with the Commissioner of Income Tax.",
               },
               {
-                icon: "📊",
+                icon: "chart",
                 title: "Statutory Independent Audits",
                 desc: "Annual audits by nationally recognised firms. Financial statements published for public scrutiny every fiscal year.",
               },
               {
-                icon: "🔒",
+                icon: "lock",
                 title: "Zero Administrative Leakage",
                 desc: "100 % of your seva amount reaches the designated cause. Operational costs are covered separately by founding patrons.",
               },
               {
-                icon: "🏦",
+                icon: "landmark",
                 title: "Direct Bank Wire (NEFT / RTGS)",
                 desc: (
                   <>
@@ -815,7 +816,7 @@ export default function DonatePage() {
                 key={pillar.title}
                 className="rounded-2xl border border-on-primary/20 bg-on-primary/10 p-6 backdrop-blur"
               >
-                <span className="mb-4 inline-block text-3xl">{pillar.icon}</span>
+                <Icon name={pillar.icon} className="mb-4 h-8 w-8" />
                 <h3
                   className="mb-2 text-lg font-bold"
                   dangerouslySetInnerHTML={{ __html: pillar.title }}
@@ -855,7 +856,7 @@ export default function DonatePage() {
             Frequently Asked Questions
           </h2>
           <p className="mb-10 text-center text-on-surface-variant">
-            Everything you need to know about contributing to Shri Ram Lala Dham
+            Everything you need to know about contributing to Shri Ram Lala Mandir
           </p>
 
           <div className="space-y-3">
@@ -917,7 +918,7 @@ export default function DonatePage() {
               seva@ramlalasangha.org
             </a>
             <a
-              href="https://wa.me/917003125972"
+              href="https://chat.whatsapp.com/EMgxEU8SV8yEqydWrh8Kf7?s=cl&p=i&mlu=4&ilr=4"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-xl bg-green-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-green-700 hover:shadow-md"
